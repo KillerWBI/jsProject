@@ -17,3 +17,4 @@ export function BLoadmore(page, data) {
     loadMoreBtn.classList.add('is-hidden');
   }
 }
+

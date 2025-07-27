@@ -12,10 +12,11 @@
 
   background: rgba(0, 0, 0, 0.5);
 
-  &.modal--is-open {
-    display: flex;
-  }
 }
+.modal--is-open {
+    display: flex;
+
+  }
 
 .modal__content {
   position: relative;

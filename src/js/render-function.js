@@ -39,3 +39,29 @@ export function CreateCategoryList(categoryList = CategoryList()) {
   })
   );
 }
+
+export function removeFocusCategory() {
+   document.querySelectorAll('.categories__btn--active').forEach(btn => {
+    btn.classList.remove('categories__btn--active');
+  });
+
+
+
+}
+
+
+export function CreateProductModal(productData) {
+  const modalContent = document.querySelector('.modal-product');
+  if (!modalContent) return;
+
+  modalContent.innerHTML = `
+    <div class="modal-product">
+      <img class="modal-product__image" src="${productData.images[0]}" alt="${productData.title}" />
+      <h2 class="modal-product__title">${productData.title}</h2>
+      <p class="modal-product__brand">Brand: ${productData.brand}</p>
+      <p class="modal-product__category">Category: ${productData.category}</p>
+      <p class="modal-product__price">Price: ${productData.price} $</p>
+      <p class="modal-product__description">${productData.description}</p>
+    </div>
+  `;
+}
