@@ -55,7 +55,7 @@ export function CreateProductModal(productData) {
   if (!modalContent) return;
 
   modalContent.innerHTML = `
-    <div class="modal-product">
+    <div class="modal-product" data-id="${productData.id}">
       <img class="modal-product__image" src="${productData.images[0]}" alt="${productData.title}" />
       <h2 class="modal-product__title">${productData.title}</h2>
       <p class="modal-product__brand">Brand: ${productData.brand}</p>
