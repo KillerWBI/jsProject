@@ -12,6 +12,7 @@ export function AddLocalStorageSet(key, id) {
 
   }
 }
+// Функция для подсчета количества элементов в LocalStorage
 export function countLocalStorage(key) {
   const items = JSON.parse(localStorage.getItem(key)) || [];
   const count = document.querySelector(`[data-${key}-count]`);

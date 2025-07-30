@@ -1,6 +1,6 @@
 import { CategoryList, getIDProduct, getProducts, getProductSearch, getProductsFromCategory } from './js/products-api.js';
 import { CreateCategoryList, CreateHomeLoadProducts, CreateProductModal, removeFocusCategory } from './js/render-function';
-import { AddLocalStorageSet, countLocalStorage, getFromStorage, removeFromStorage, shearId } from './js/storage.js';
+import { AddLocalStorageSet, countLocalStorage, removeFromStorage, shearId } from './js/storage.js';
 let page = 1;
 const loadMoreBtn = document.querySelector('.load-more-btn');
 const categoriesContainer = document.querySelector('.categories');
@@ -124,22 +124,22 @@ BtnContainerLike.addEventListener('click', (event) => {
     event.target.textContent = 'Remove from Wishlist';
     event.target.classList.remove('modal-product__btn--wishlist');
     AddLocalStorageSet('wishlist', IdProduct);
-    console.log(getFromStorage('wishlist'));
+
   } else if(event.target.textContent.trim() === 'Remove from Wishlist') {
     event.target.textContent = 'Add to Wishlist';
     event.target.classList.add('modal-product__btn--wishlist');
     removeFromStorage('wishlist', IdProduct)
-    console.log(getFromStorage('wishlist'));
+
   } else if(event.target.textContent.trim() === 'Add to Cart') {
     event.target.textContent = 'Remove from Cart';
     event.target.classList.remove('modal-product__btn--cart');
     AddLocalStorageSet('cart', IdProduct);
-    console.log(getFromStorage('cart'));
+
   } else if(event.target.textContent.trim() === 'Remove from Cart') {
     event.target.textContent = 'Add to Cart';
     event.target.classList.add('modal-product__btn--cart');
     removeFromStorage('cart', IdProduct)
-    console.log(getFromStorage('cart'));
+
   }
 
 

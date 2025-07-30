@@ -18,7 +18,7 @@ export async function getProducts(page = 1) {
   } catch (error) {
     iziToast.error({
         title: 'error',
-        message: `Помилка при завантаженні зображень:, ${error.message}`,
+        message: `getProducts Помилка при завантаженні зображень:, ${error.message}`,
         timeout: 3000,
         position: 'topRight',
       });
@@ -33,7 +33,7 @@ export async function getIDProduct(id) {
   } catch (error) {
     iziToast.error({
         title: 'error',
-        message: `Помилка при завантаженні зображень:, ${error.message}`,
+        message: ` getIDProduct Помилка при завантаженні зображень:, ${error.message}`,
         timeout: 3000,
         position: 'topRight',
       });
@@ -54,7 +54,7 @@ export async function getProductSearch(q, page = 1) {
   } catch (error) {
     iziToast.error({
         title: 'error',
-        message: `Помилка при завантаженні зображень:, ${error.message}`,
+        message: ` getProductSearch Помилка при завантаженні зображень:, ${error.message}`,
         timeout: 3000,
         position: 'topRight',
       });
@@ -69,7 +69,7 @@ export async function CategoryList() {
   } catch (error) {
     iziToast.error({
         title: 'error',
-        message: `Помилка при завантаженні зображень:, ${error.message}`,
+        message: ` CategoryList Помилка при завантаженні зображень:, ${error.message}`,
         timeout: 3000,
         position: 'topRight',
       });
@@ -89,7 +89,7 @@ export async function getProductsFromCategory(category  ,page = 1) {
   } catch (error) {
     iziToast.error({
         title: 'error',
-        message: `Помилка при завантаженні зображень:, ${error.message}`,
+        message: `getProductsFromCategory Помилка при завантаженні зображень:, ${error.message}`,
         timeout: 3000,
         position: 'topRight',
       });
